@@ -1,0 +1,75 @@
+@charset "UTF-8"
+
+        body{
+            background-color: #4AA069;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: Bold;
+            font-size: 1em;
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            color: white;
+            text-align: center;
+            width: 100%;
+            background-image:linear-gradient( to top, #17390e, #4a9136) ;
+            padding: 20px;
+        }
+        h1{
+            font-size: 40px;
+            font-weight: lighter;
+            text-align: center;
+            font-family: Bebas Neue Regular, sans-serif ;
+        }
+        nav{
+            padding: 5px;
+        }
+        nav>a{
+            color: #d7f6ce;
+            text-decoration: none;
+            margin-right: 30px;
+            font-weight: bold;
+        }
+        nav > a{
+            font-size: 10px;
+            text-align: left;
+        }
+        nav > a:hover {
+                background-image:linear-gradient(to top,#17390e,#8DD17B );
+        }
+        main{
+            width: 90%;
+            margin: auto;
+            background-color: white;
+            padding: 10px;
+            text-align: justify;
+        }
+        main > h1{
+            font-family: Droid Regular, Sans-Serif;
+        }
+        #video{
+            background-color: #17390e;
+            width:auto;
+        }
+        main > video{
+            background-color: #17390e;
+        }
+        #lista > h3{ 
+                background-color: #17390e;
+                color: white;
+                margin: 0px;
+                padding: none;
+        }
+        #lista{
+            background-color: rgb(131, 225, 173);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        footer{
+            text-align: center;
+            background-color: #17390e;
+            color: white;
+            margin: 0px;
+            padding: 2px;
+        }
