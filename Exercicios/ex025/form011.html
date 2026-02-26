@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" autocomplete="on" method="post">
+       <p>
+        <label for="iname">Nome:</label>
+        <input type="text" name="name" id="iname" required placeholder="Nome" maxlength="15" size="16">
+       </p>
+       <p>
+        <label for="isobreno">Sobrenome:</label>
+        <input type="text" name="sobreno" id="isobreno" required placeholder="Sobrenome do usuário" maxlength="15" size="18">
+       </p>
+       <p>
+        <label for="iusu">Usuário:</label>
+        <input type="text" name="usu" id="iusu" required placeholder="Nome de usuário" maxlength="25" minlength="5" size="15">
+       </p>
+       <p>
+        <label for="isenha">Senha:</label>
+        <input type="password" name="senha" id="isenha" required maxlength="10" placeholder="senha" size="15" current-password>
+       </p>
+       <p>
+        <label for="imedia">Média:</label>
+        <input type="number" name="media" id="imedia" min="0" max="10" step="0.1" value="5">
+       <p>
+        <label for="iperio">Período Letivo:</label>
+        <input type="month" name="perio" id="iperio" value="2026-01">
+       </p>
+       <p>
+        <label for="idia">Dia da prova:</label>
+        <input type="date" name="dia" id="idia">
+       </p>
+       <p>
+        <label for="ihora">Horário da prova:</label>
+        <input type="time" name="hora" id="ihora">
+       </p>
+       <fieldset>
+        <legend>Dados pessoais</legend>
+        <p>
+            <label for="ino">Nome</label>
+            <input type="text" name="no" id="ino">
+        </p>
+        <p>
+            <label for="iemail">E-mail</label>
+            <input type="email" name="email" id="iemail">
+        </p>
+        <p>
+            <label for="itel">Telefone</label>
+            <input type="tel" name="tel" id="itel" pattern="^\({2})\d{4,5}-$\d{4}$" required placeholder="(xx)xxxxx-xxxx"> 
+        </p>
+       </fieldset>
+       <fieldset>
+        <legend>Sexo</legend>
+        <input type="radio" name="sexo" id="isexmas" value="M"><label for="isexmas">Masculino</label>
+        <input type="radio" name="sexo" id="isexfem" checked value="F"><label for="isexfem">Feminino</label>
+       </fieldset>
+       <fieldset>
+        <legend>Esporte favorito</legend>
+        <input type="checkbox" name="fut" id="ifut"><label for="ifut">Futebol</label>
+        <p><input type="checkbox" name="bas" id="ibas"><label for="ibas">Basquete</label></p>
+        <p><input type="checkbox" name="nat" id="inat"><label for="inat">Natação</label></p>
+        <p><input type="checkbox" name="ten" id="iten"><label for="iten">Tênis</label></p>
+       </fieldset>
+       <p>
+       <label for="icor">Cor:</label>
+       <input type="color" name="cor" id="icor">
+       </p>
+       <p>
+        <label for="inivel">Nível de satisfação</label>
+        <input type="range" name="nivel" id="inivel" max="5" min="1" value="2">
+       </p>
+       <p>
+        <label for="ifoto">Foto de perfil</label>
+        <input type="file" name="foto" id="ifoto">
+       </p>
+       <p>
+        <label for="iestado">Estado</label>
+        <select name="Estado" id="iestado" >
+            <option value="Estado" selected>---Escolha---</option>
+            <optgroup label="Região Sudeste">
+                <option value="MG">Minas Gerais</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+            </optgroup>
+            <optgroup label="Região Nordeste">
+                <option value="RN">Rio Grande Do Norte</option>
+                <option value="PE">Pernambuco</option>
+                <option value="MA">Maranhão</option>
+            </optgroup>
+        </select>
+       </p>
+       <p>
+        <label for="iprof">Profissão</label>
+        <input type="text" name="prof" id="iprof" list="listprof">
+        <datalist id="listprof">
+            <option value="ADM">Administrador</option>
+            <option value="CONT">Contabilista</option>
+            <option value="DEV">Desenvolvedor</option>
+            <option value="PROF">Professor</option>
+        </datalist>
+       </p>
+       <p>
+        <label for="imen">Mensagem</label> <br>
+        <textarea name="men" id="imen" cols="30" rows="10"></textarea>
+       </p>
+       <p>
+        <label for="inum1">Número 1:</label>
+        <input type="number" name="num1" id="inum1" max="100" min="0"
+        oninput="isoma.innerHTML = Number(inum1.value) + Number(inum2.value)">
+       </p>
+       <p>
+        <label for="inum2">Número 2:</label>
+        <input type="number" name="num2" id="inum2" max="100" min="0"
+        oninput="isoma.innerHTML = Number(inum1.value) + Number(inum2.value)">
+      </p>
+      <p>
+        <label for="isoma">Soma:</label>
+        <output name="soma" id="isoma">0</output>
+      </p>
+      <p>
+        <label for="inum">Número</label>
+        <input type="range" name="num" id="inum" max="10" min="0" 
+         oninput="inumero.innerHTML = Number(inum.value)">
+        <output id="inumero">5</output>
+      </p>
+       <p>
+        <label for="iano">Em que ano você nasceu?</label>
+        <input type="number" name="ano" id="iano" max="2026" min="1900" oninput="calcIdade ()">
+       </p>
+       <p>
+        <label for="iidade">Sua idade é:</label>
+        <output id="iidade">0</output>
+       </p>
+        <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+       </p>
+    </form>
+    <script>
+        function calcIdade () {
+               let atual = new Date().getFullYear()
+               iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
+</body>
+</html>
